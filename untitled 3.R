@@ -11,6 +11,7 @@ x <- rmvn(n = n,
 
 y <- 1 + 1.5 * x[, 2] + rnorm(n)
 #x<-scale(x)
+x<- (x-mean(x))/sd(x)
 simdata <- data.frame(y = y, x = x[, 1])
 resultALL <-
   Btest(
